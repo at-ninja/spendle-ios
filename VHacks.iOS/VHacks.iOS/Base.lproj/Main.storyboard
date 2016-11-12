@@ -1,26 +1,74 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TL3-Ny-cLM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller View Controller-->
+        <scene sceneID="FFQ-Cr-xRI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="TL3-Ny-cLM" customClass="NavigationControllerViewController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SaD-di-JCb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sKF-N1-79j" kind="relationship" relationship="rootViewController" id="ttw-AM-C4q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FCV-ln-KWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-366" y="327"/>
+        </scene>
+        <!--SpendTrack-->
+        <scene sceneID="LzO-ld-PTv">
+            <objects>
+                <viewController id="sKF-N1-79j" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="NOr-jp-nfT"/>
+                        <viewControllerLayoutGuide type="bottom" id="AqP-cD-wdY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="l6K-bb-eb1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter your phone number below to get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URk-zz-nkl">
+                                <rect key="frame" x="11" y="168" width="353" height="112"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a23-ce-ndQ" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                <rect key="frame" x="16" y="288" width="343" height="62"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="URk-zz-nkl" firstAttribute="leading" secondItem="l6K-bb-eb1" secondAttribute="leadingMargin" constant="-5" id="0Bp-Qa-SmK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a23-ce-ndQ" secondAttribute="trailing" id="67w-07-NyP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="URk-zz-nkl" secondAttribute="trailing" constant="-5" id="Jdq-z1-Nq0"/>
+                            <constraint firstItem="URk-zz-nkl" firstAttribute="centerX" secondItem="l6K-bb-eb1" secondAttribute="centerX" id="RDU-yI-6k9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="a23-ce-ndQ" secondAttribute="leading" id="lMh-NM-Sjm"/>
+                            <constraint firstItem="URk-zz-nkl" firstAttribute="top" secondItem="NOr-jp-nfT" secondAttribute="bottom" constant="104" id="pfi-ZB-ZZt"/>
+                            <constraint firstItem="a23-ce-ndQ" firstAttribute="centerX" secondItem="l6K-bb-eb1" secondAttribute="centerX" id="qWc-Kn-lR5"/>
+                            <constraint firstItem="a23-ce-ndQ" firstAttribute="top" secondItem="URk-zz-nkl" secondAttribute="bottom" constant="8" id="qbb-bV-bgx"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="SpendTrack" id="26E-9P-t1v"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPB-88-GgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="493.60000000000002" y="326.98650674662673"/>
         </scene>
     </scenes>
 </document>

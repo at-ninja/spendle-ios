@@ -1,3 +1,20 @@
-PODFILE CHECKSUM: 5a043c770887273e12018ee59be60be1b0b35a88
+PODS:
+  - PhoneNumberKit (1.0.1):
+    - PhoneNumberKit/PhoneNumberKitCore (= 1.0.1)
+    - PhoneNumberKit/UIKit (= 1.0.1)
+  - PhoneNumberKit/PhoneNumberKitCore (1.0.1)
+  - PhoneNumberKit/UIKit (1.0.1):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - SwiftyJSON (3.1.1)
+
+DEPENDENCIES:
+  - PhoneNumberKit (~> 1.0)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  PhoneNumberKit: 0b5ea9a5454d201656db766343e9d768f8542496
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+
+PODFILE CHECKSUM: cb06297c087ff3bc751799146d9d9f5008ad4ec7
 
 COCOAPODS: 1.1.1
