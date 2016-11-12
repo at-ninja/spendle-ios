@@ -31,6 +31,11 @@ static const NSString *url = @"https://stark-shelf-87339.herokuapp.com/";
     return _locationManager;
 }
 
+-(void)setAroundMeSpots:(NSArray *)aroundMeSpots {
+    // Post a notification after update.
+    _aroundMeSpots = aroundMeSpots;
+}
+
 -(BOOL)isAuthed {
     return [[self authToken] length] > 0;
 }
@@ -44,6 +49,18 @@ static const NSString *url = @"https://stark-shelf-87339.herokuapp.com/";
     const NSString* propertyKey = @"VHACKS_AUTH_KEY";
     [[NSUserDefaults standardUserDefaults] setValue:token forKey:propertyKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void)getAroundMyLat:(double) lat AndLng:(double) lng withCompletionHandler:(void (^) (NSArray *)) handler {
+    NSDictionary *request = [NSDictionary dictionaryWithObjectsAndKeys:[self authToken], @"auth_token",
+                             [NSNumber numberWithDouble:lat], @"lat",
+                             [NSNumber numberWithDouble:lng], @"lng",
+                             [NSNumber numberWithInt:10], "@limit", nil];
+    [self postDictionary:request toEndPoint:@"aroundme" withCompletionHandler:^(NSDictionary *dictionary) {
+        if(dictionary != nil && [dictionary objectForKey:@"locations"]) {
+            _aroundMeSpots = [dictionary objectForKey:@"locations"];
+        }
+    }];
 }
 
 -(void)startUpdates {

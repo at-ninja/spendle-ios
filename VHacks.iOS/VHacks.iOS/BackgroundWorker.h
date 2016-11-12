@@ -13,6 +13,7 @@
 
 @property(nonatomic) BOOL authed;
 @property(strong, nonatomic) CLLocationManager *locationManager;
+@property(strong, nonatomic) NSArray *aroundMeSpots;
 
 +(id)sharedManager;
 -(BOOL)isAuthed;
