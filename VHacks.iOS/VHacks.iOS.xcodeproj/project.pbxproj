@@ -14,6 +14,7 @@
 		8C4974201DD78337001D8888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C49741F1DD78337001D8888 /* Assets.xcassets */; };
 		8C4974231DD78337001D8888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4974211DD78337001D8888 /* LaunchScreen.storyboard */; };
 		8CCEF19C1DD784A3003E3414 /* NavigationControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF19B1DD784A3003E3414 /* NavigationControllerViewController.m */; };
+		8CCEF1A21DD7B11D003E3414 /* BackgroundWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEF1A11DD7B11D003E3414 /* BackgroundWorker.m */; };
 		C8BB037F838F9C01D6DFB9F5 /* Pods_VHacks_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55CC9D4C3558775F3C0C78F /* Pods_VHacks_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,8 @@
 		8C4974241DD78337001D8888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CCEF19A1DD784A3003E3414 /* NavigationControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerViewController.h; sourceTree = "<group>"; };
 		8CCEF19B1DD784A3003E3414 /* NavigationControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerViewController.m; sourceTree = "<group>"; };
+		8CCEF1A01DD7B11D003E3414 /* BackgroundWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundWorker.h; sourceTree = "<group>"; };
+		8CCEF1A11DD7B11D003E3414 /* BackgroundWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundWorker.m; sourceTree = "<group>"; };
 		A55CC9D4C3558775F3C0C78F /* Pods_VHacks_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VHacks_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F145ACFD75AC03E3F1CB04 /* Pods-VHacks.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VHacks.iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VHacks.iOS/Pods-VHacks.iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +84,8 @@
 				8C4974171DD78337001D8888 /* AppDelegate.m */,
 				8C4974191DD78337001D8888 /* ViewController.h */,
 				8C49741A1DD78337001D8888 /* ViewController.m */,
+				8CCEF1A01DD7B11D003E3414 /* BackgroundWorker.h */,
+				8CCEF1A11DD7B11D003E3414 /* BackgroundWorker.m */,
 				8C49741C1DD78337001D8888 /* Main.storyboard */,
 				8C49741F1DD78337001D8888 /* Assets.xcassets */,
 				8C4974211DD78337001D8888 /* LaunchScreen.storyboard */,
@@ -144,6 +149,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 93CFX4QF84;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -235,6 +245,7 @@
 				8C4974181DD78337001D8888 /* AppDelegate.m in Sources */,
 				8CCEF19C1DD784A3003E3414 /* NavigationControllerViewController.m in Sources */,
 				8C4974151DD78337001D8888 /* main.m in Sources */,
+				8CCEF1A21DD7B11D003E3414 /* BackgroundWorker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

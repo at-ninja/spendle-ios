@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
     return YES;
 }
 
@@ -45,6 +46,19 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    // Call to update our location.
+    BackgroundWorker *worker = [BackgroundWorker sharedManager];
+    UIBackgroundFetchResult result = UIBackgroundFetchResultFailed;
+    
+    if([worker authed]) {
+        [worker startUpdates];
+        result = UIBackgroundFetchResultNewData;
+    }
+    
+    completionHandler(result);
 }
 
 

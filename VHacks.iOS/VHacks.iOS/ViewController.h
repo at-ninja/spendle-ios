@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BackgroundWorker.h"
+#import <PhoneNumberKit/PhoneNumberKit-umbrella.h>
+#import <PhoneNumberKit/PhoneNumberKit-Swift.h>
 
 @interface ViewController : UIViewController
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BackgroundWorker.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
