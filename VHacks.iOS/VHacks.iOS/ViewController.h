@@ -11,7 +11,7 @@
 #import <PhoneNumberKit/PhoneNumberKit-umbrella.h>
 #import <PhoneNumberKit/PhoneNumberKit-Swift.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UITableViewController
 
 
 @end
